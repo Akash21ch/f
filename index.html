@@ -4,117 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to Our Financial Services</title>
- <link rel="stylesheet" href="path/to/your/main.css">
-  <style>
-    /* Inline CSS can also be moved to your main.css file */
-    :root {
-      --primary-color: #0056b3;
-      --secondary-color: #e9ecef;
-    }
-
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      color: #333;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: var(--secondary-color);
-    }
-
-    .navbar {
-      background-color: var(--primary-color);
-      border-bottom: 3px solid #004a9f; /* Adjusted color value */
-    }
-
-    .navbar-brand {
-      font-weight: bold;
-      color: white;
-    }
-
-    .navbar-light .navbar-nav .nav-link {
-      color: white;
-      margin-right: 15px;
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover {
-      color: #66afff; /* Adjusted color value */
-    }
-
-    .jumbotron {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 2rem 1rem;
-      margin-bottom: 4rem;
-    }
-
-    .jumbotron h1 {
-      font-size: 3rem;
-    }
-
-    .jumbotron p {
-      font-size: 1.2rem;
-    }
-
-    .container {
-      background-color: white;
-      padding: 2rem;
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    .btn-primary {
-      background-color: var(--primary-color);
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #66afff; /* Adjusted color value */
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .navbar-brand,
-      .navbar-nav .nav-link {
-        color: white;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles/main.css"> <!-- Update the href with the correct path -->
 </head>
 <body>
 
-  <nav class="navbar">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Financial Logo</a>
-    <div class="navbar-nav">
-      <a class="nav-link" href="#">Home</a>
-      <a class="nav-link" href="#">Services</a>
-      <a class="nav-link" href="#">About</a>
-      <a class="nav-link" href="#">Contact</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
-  <div class="jumbotron">
+  <!-- Jumbotron/Header -->
+  <div class="jumbotron text-center">
     <h1>Welcome to Our Financial Services</h1>
     <p>Investing for Everyone</p>
   </div>
 
+  <!-- Main Content Section -->
   <div class="container">
-    <section>
-      <!-- Your main content goes here -->
-      <p>This is an example paragraph for your main content area. Replace this with your actual content.</p>
-    </section>
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading">Professional Investor Insights</h2>
+        <p>This is an example paragraph for your main content area. Replace this with your actual content.</p>
+        <!-- Additional content here -->
+      </div>
+    </div>
   </div>
 
-  <footer>
+  <!-- Missing Part From Previous Version -->
+  <!-- Include sections like 'Professional Investor Insights', 'Investment Categories', etc., here -->
+  <!-- For instance: -->
+  <section id="insights">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Professional Investor Insights</h2>
+          <p>Insights and resources to streamline portfolio management.</p>
+          <!-- Add more content and cards here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="investment-categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Investment Categories</h2>
+          <!-- Categories like 'Equities', 'Fixed Income', etc. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
     <p>&copy; 2024 Financial Services Website</p>
   </footer>
 
