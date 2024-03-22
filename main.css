@@ -1,74 +1,112 @@
+/* main.css - Your Custom Stylesheet */
 :root {
   --primary-color: #0056b3;
   --secondary-color: #e9ecef;
 }
-
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #333;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
 }
 
-/* Corrected class name from .header to .navbar to match your HTML */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  background-color: var(--primary-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white;
 }
 
 .navbar ul {
-    list-style: none;
+  list-style: none;
 }
 
 .navbar ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #000;
+.navbar a,
+.navbar-light .navbar-nav .nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: lighten(white, 10%);
 }
 
 .banner {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 50px 0;
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 50px 0;
 }
 
 .investor-info, .investment-options {
-    padding: 20px 10%;
+  padding: 20px 10%;
 }
 
 .cards-container, .options-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures responsiveness */
 }
 
 .card, .option-card {
-    background-color: #e0e0e0;
-    padding: 20px;
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: center;
+  background-color: #e0e0e0;
+  padding: 20px;
+  width: calc(33.333% - 20px); /* Adjusts for margin */
+  margin: 10px; /* Added so there's space between cards */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow for depth */
 }
 
 button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    color: white;
+  }
+
+  .cards-container, .options-container {
+    flex-direction: column;
+  }
+
+  .card, .option-card {
+    width: 100%; /* Full width on small screens */
+    margin: 10px 0; /* Stack with space between */
+  }
+}
+
+/* Additional custom styles can be added below */
+
