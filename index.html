@@ -1,88 +1,71 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Services Website</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-     <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Professional Financial Services Website</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0056b3;
+      --secondary-color: #e9ecef;
+    }
+    
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar-brand {
+      color: var(--primary-color);
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    .btn-primary:hover {
+      background-color: darken(var(--primary-color), 10%);
+      border-color: darken(var(--primary-color), 10%);
+    }
+
+    footer {
+      background: var(--secondary-color);
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Add additional styles here */
+  </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">Financial Logo</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#funds">Funds</a></li>
-                    <li><a href="#solutions">Solutions</a></li>
-                </ul>
-            </nav>
-            <div class="search"><button>Search</button></div>
-        </div>
-    </header>
-    
-    <main>
-        <section class="banner">
-            <h1>Investing for Everyone</h1>
-            <p>Find a range of investment options that cater to all your financial needs.</p>
-            <button id="exploreButton">Explore Investment Options</button>
-        </section>
-        
-        <section class="investor-info">
-            <h2>Professional Investor Insights</h2>
-            <p>Insights and resources for professional investors to streamline portfolio management.</p>
-            <div class="cards-container">
-                <div class="card">
-                    <h3>Market Commentary</h3>
-                    <p>Weekly insights into the market's performance.</p>
-                    <button>Read Commentary</button>
-                </div>
-                <div class="card">
-                    <h3>Investor Education</h3>
-                    <p>Expand your knowledge with our investment education series.</p>
-                    <button>Learn More</button>
-                </div>
-                <div class="card">
-                    <h3>Investment Podcast
-                    <h3>Investment Podcasts</h3>
-                    <p>Listen to the latest discussions on financial trends and strategies.</p>
-                    <button>Listen Now</button>
-                </div>
-            </div>
-        </section>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Financial Logo</a>
+    <!-- ... -->
+  </nav>
 
-        <section class="investment-options">
-            <h2>Investment Categories</h2>
-            <div class="options-container">
-                <div class="option-card">
-                    <h3>Equities</h3>
-                    <p>Dive into the stock market and grow your capital by investing in equities.</p>
-                    <button>Explore Equities</button>
-                </div>
-                <div class="option-card">
-                    <h3>Fixed Income</h3>
-                    <p>Stable and lower-risk investment options through bonds and fixed income funds.</p>
-                    <button>View Bonds</button>
-                </div>
-                <div class="option-card">
-                    <h3>Alternatives</h3>
-                    <p>Explore alternative investment options like real estate, commodities, and hedge funds.</p>
-                    <button>See Alternatives</button>
-                </div>
-                <div class="option-card">
-                    <h3>Cash Management</h3>
-                    <p>Manage liquidity effectively with our short-term investment options.</p>
-                    <button>Manage Cash</button>
-                </div>
-            </div>
-        </section>
-    </main>
+  <header class="jumbotron text-center">
+    <h1>Welcome to Our Financial Services</h1>
+    <p>Investing for Everyone</p>
+  </header>
 
-    <footer>
-        <p>© 2024 Financial Services Website</p>
-    </footer>
+  <div class="container mt-5">
+    <section id="services">
+      <!-- ... Your services content here ... -->
+    </section>
 
-    <script src="script.js"></script>
+    <!-- ... Other sections of your website ... -->
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Financial Services Website</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
