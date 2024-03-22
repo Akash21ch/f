@@ -4,7 +4,8 @@ body, h1, h2, h3, p {
     font-family: 'Arial', sans-serif;
 }
 
-.header {
+/* Corrected class name from .header to .navbar to match your HTML */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,4 +65,3 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
