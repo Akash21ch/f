@@ -1,4 +1,5 @@
 /* main.css - Your Custom Stylesheet */
+
 :root {
   --primary-color: #0056b3;
   --secondary-color: #e9ecef;
@@ -15,11 +16,9 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
   background-color: var(--primary-color);
+  /* Replace the darken() function with an actual color value */
+  border-bottom: 3px solid #004a9f; /* Darker shade of primary color */
 }
 
 .navbar-brand {
@@ -27,68 +26,55 @@ body {
   color: white;
 }
 
-.navbar ul {
-  list-style: none;
-}
-
-.navbar ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.navbar a,
 .navbar-light .navbar-nav .nav-link {
-  text-decoration: none;
   color: white;
+  margin-right: 15px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: lighten(white, 10%);
+  /* Replace the lighten() function with an actual color value */
+  color: #66afff; /* Lighter shade of white */
 }
 
-.banner {
-  background-color: var(--secondary-color);
-  text-align: center;
-  padding: 50px 0;
-}
-
-.investor-info, .investment-options {
-  padding: 20px 10%;
-}
-
-.cards-container, .options-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Ensures responsiveness */
-}
-
-.card, .option-card {
-  background-color: #e0e0e0;
-  padding: 20px;
-  width: calc(33.333% - 20px); /* Adjusts for margin */
-  margin: 10px; /* Added so there's space between cards */
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow for depth */
-}
-
-button {
+.jumbotron {
   background-color: var(--primary-color);
   color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
+  padding: 2rem 1rem;
+  margin-bottom: 4rem;
 }
 
-button:hover {
-  background-color: darken(var(--primary-color), 10%);
+.jumbotron h1 {
+  font-size: 3rem;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+}
+
+.container {
+  background-color: white;
+  padding: 2rem;
 }
 
 footer {
   background-color: var(--primary-color);
   color: white;
+  padding: 1rem;
   text-align: center;
-  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  /* Replace the lighten() function with an actual color value */
+  background-color: #66afff; /* Lighter shade of primary color */
 }
 
 /* Responsive adjustments */
@@ -97,16 +83,6 @@ footer {
   .navbar-nav .nav-link {
     color: white;
   }
-
-  .cards-container, .options-container {
-    flex-direction: column;
-  }
-
-  .card, .option-card {
-    width: 100%; /* Full width on small screens */
-    margin: 10px 0; /* Stack with space between */
-  }
 }
 
 /* Additional custom styles can be added below */
-
