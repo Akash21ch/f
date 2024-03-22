@@ -1,0 +1,19 @@
+<?php
+// InvestmentModel.php
+
+class InvestmentModel {
+    public function getInvestmentOptions() {
+        return [
+            'equities' => [
+                'title' => 'Equities',
+                'description' => 'Dive into the stock market and grow your capital by investing in equities.'
+            ],
+            'fixedIncome' => [
+                'title' => 'Fixed Income',
+                'description' => 'Stable and lower-risk investment options through bonds and fixed income funds.'
+            ],
+           
+        ];
+    }
+}
+?>

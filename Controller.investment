@@ -1,0 +1,19 @@
+<?php
+// InvestmentController.php
+require_once 'InvestmentModel.php';
+
+class InvestmentController {
+    private $model;
+
+    public function __construct() {
+        $this->model = new InvestmentModel();
+    }
+
+    public function showInvestmentPage() {
+        $options = $this->model->getInvestmentOptions();
+        include 'InvestmentView.php'; 
+    }
+}
+$controller = new InvestmentController();
+$controller->showInvestmentPage();
+?>

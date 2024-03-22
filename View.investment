@@ -1,0 +1,36 @@
+<?php
+// InvestmentView.php
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Services Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header and other static content -->
+
+    <main>
+        <section class="investment-options">
+            <h2>Investment Categories</h2>
+            <div class="options-container">
+                <?php foreach ($options as $key => $option): ?>
+                    <div class="option-card">
+                        <h3><?php echo htmlspecialchars($option['title']); ?></h3>
+                        <p><?php echo htmlspecialchars($option['description']); ?></p>
+                        <button>Explore <?php echo htmlspecialchars($option['title']); ?></button>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer and other static content -->
+
+    <script src="script.js"></script>
+</body>
+</html>
