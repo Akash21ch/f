@@ -1,71 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Professional Financial Services Website</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #0056b3;
-      --secondary-color: #e9ecef;
+/* main.css - Your Custom Stylesheet */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #e9ecef;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    border-bottom: 3px solid darken(var(--primary-color), 10%);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    margin-right: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: lighten(white, 10%);
+}
+
+.jumbotron {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    margin-bottom: 4rem;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: lighten(var(--primary-color), 10%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand,
+    .navbar-nav .nav-link {
+        color: white;
     }
-    
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      color: #333;
-      line-height: 1.6;
-    }
+}
 
-    .navbar-brand {
-      color: var(--primary-color);
-    }
-
-    .btn-primary {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
-    }
-
-    .btn-primary:hover {
-      background-color: darken(var(--primary-color), 10%);
-      border-color: darken(var(--primary-color), 10%);
-    }
-
-    footer {
-      background: var(--secondary-color);
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    /* Add additional styles here */
-  </style>
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Financial Logo</a>
-    <!-- ... -->
-  </nav>
-
-  <header class="jumbotron text-center">
-    <h1>Welcome to Our Financial Services</h1>
-    <p>Investing for Everyone</p>
-  </header>
-
-  <div class="container mt-5">
-    <section id="services">
-      <!-- ... Your services content here ... -->
-    </section>
-
-    <!-- ... Other sections of your website ... -->
-  </div>
-
-  <footer>
-    <p>&copy; 2024 Financial Services Website</p>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+/* Additional custom styles can be added below */
