@@ -8,6 +8,27 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('investment-categories').scrollIntoView({ behavior: 'smooth' });
         });
     }
+    document.addEventListener('DOMContentLoaded', function() {
+  // Event delegation for FAQ toggling
+  document.querySelector('.faq-container').addEventListener('click', function(event) {
+    if (event.target.classList.contains('faq-question')) {
+      const answer = event.target.nextElementSibling;
+      answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+    }
+  });
+});
+
+// Example HTML structure for the FAQ:
+/*
+<div class="faq-container">
+  <div class="faq">
+    <div class="faq-question">What is a stock?</div>
+    <div class="faq-answer" style="display: none;">A stock is a type of financial instrument...</div>
+  </div>
+  <!-- Repeat for other FAQs -->
+</div>
+*/
+
 
     // Attach the 'learnMore' function to buttons within the 'investment-categories' section
     var investmentCards = document.querySelectorAll('#investment-categories .card button');
