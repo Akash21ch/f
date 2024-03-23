@@ -155,3 +155,27 @@ font-size: 0.875rem; /* Slightly smaller text to fit smaller screens */
 .container {
     padding: 1rem; /* Less padding on smaller screens */
 }
+/* Main CSS File */
+
+/* Rest of your CSS */
+
+/* Logo Styles */
+.logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font */
+    font-size: 3rem; /* Size of the logo */
+    font-weight: 700; /* Boldness of the logo */
+    color: #e63946; /* The color you've shown for 'NEXT' */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.1em; /* Spacing between letters */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Additional styles for the container of the logo if needed */
+.logo-container {
+    text-align: center; /* Center the logo container */
+    margin: auto; /* Margin auto for horizontal centering */
+    width: 100%; /* Full width */
+}
