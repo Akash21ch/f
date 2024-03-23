@@ -158,4 +158,23 @@ footer p {
 
   .container, .jumbotron {
     padding: 1rem;
- 
+ /* Existing CSS */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between the logo image and the text */
+}
+
+#logo {
+  max-height: 50px; /* Example size - adjust as needed */
+}
+
+.navbar-brand span {
+  color: #fff; /* White text color */
+  font-size: 1.5rem; /* Adjust font size as necessary */
+  font-weight: bold; /* Optional: if you want the company name to be bold */
+}
+
+/* ... rest of your existing CSS ... */
+
