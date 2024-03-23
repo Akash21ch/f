@@ -1,71 +1,82 @@
-/* main.css - Revised Custom Stylesheet for a different layout */
+/* main.css - Enhanced Custom Stylesheet for a modern, minimalist layout */
 
 :root {
-  --primary-color: #0056b3;
-  --secondary-color: #e9ecef;
-  --accent-color: #ffca28; /* Adding an accent color for highlights */
+  --primary-color: #2c3e50; /* A dark, desaturated blue */
+  --secondary-color: #ecf0f1; /* A very light gray-blue */
+  --accent-color: #3498db; /* A bright blue */
+  --text-color: #2c3e50; /* Matching text color to primary for consistency */
+  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6;
+  font-family: var(--font-stack);
+  font-size: 1rem; /* 16px */
+  color: var(--text-color);
+  background-color: var(--secondary-color);
   margin: 0;
   padding: 0;
-  background-color: var(--secondary-color);
-  overflow-x: hidden; /* Prevents horizontal scroll */
+  line-height: 1.8;
 }
 
 .navbar {
   background-color: var(--primary-color);
-  border-bottom: 3px solid #004a9f; /* Darker shade of primary color */
-  padding: 0.5rem 1rem;
+  padding: 1rem 5%; /* Increased padding for a more airy feel */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-brand {
-  font-weight: bold;
-  color: white;
+  font-size: 1.5rem; /* Larger size for brand/logo */
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: white;
-  margin-right: 15px;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 2rem;
+  transition: color 0.3s ease;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
   color: var(--accent-color);
+  outline: none; /* Removes the outline to maintain a clean look */
 }
 
 .jumbotron {
   background-color: var(--primary-color);
-  color: white;
-  padding: 2rem 1rem;
+  color: #ffffff;
+  padding: 4rem 0; /* Increased top and bottom padding */
   margin-bottom: 2rem;
-  border-radius: 0.5rem; /* Rounded corners for jumbotron */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow for depth */
+  text-align: center;
 }
 
 .jumbotron h1 {
-  font-size: 2.5rem;
+  font-size: 4rem; /* Larger size for main heading */
+  margin-bottom: 0.5rem;
 }
 
 .jumbotron p {
-  font-size: 1rem;
+  font-size: 1.25rem; /* Larger paragraph for emphasis */
+  max-width: 600px; /* Constraining width for readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
-  background-color: white;
+  max-width: 1200px; /* Max-width for control over container width */
+  margin: 0 auto; /* Centering container */
+  background-color: #ffffff;
   padding: 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistent shadow for depth */
-  border-radius: 0.5rem; /* Rounded corners for container */
+  border-radius: 10px; /* Subtle rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
 }
 
 footer {
   background-color: var(--primary-color);
-  color: white;
-  padding: 1rem;
+  color: #ffffff;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -74,56 +85,75 @@ footer p {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
+  color: #ffffff;
   border: none;
-  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+  padding: 0.75rem 1.5rem; /* Larger padding for buttons */
+  border-radius: 5px; /* Matching border-radius with container */
+  transition: background-color 0.2s ease;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-color); /* Using accent color for hover state */
+  background-color: darken(var(--accent-color), 10%);
 }
 
 .card {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 0.5rem; /* Rounded corners for card */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow for cards */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for cards */
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Spacing between cards */
+  background: #ffffff;
+  padding: 1.5rem; /* More padding for a better card content space */
+  border-radius: 10px; /* Rounded corners for cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Smooth shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Deeper shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 3rem;
+  }
+
+  .jumbotron p {
+    font-size: 1rem;
+  }
+
   .navbar-brand,
   .navbar-nav .nav-link {
-    color: white;
+    margin-right: 0.5rem; /* Reduced margin for smaller screens */
   }
 
-  .jumbotron h1 {
-    font-size: 2rem;
-  }
-
-  .jumbotron p,
-  .container,
   .card {
     padding: 1rem;
   }
-}
 
-@media (max-width: 576px) {
-  .jumbotron {
+  .container, .jumbotron {
     padding: 1rem;
-    text-align: center;
   }
 
-  .navbar {
-    padding: 0.5rem;
-  }
+  .btn-primary {
+    padding: 0.5rem 1rem; /* Smaller buttons
+.btn-primary {
+    padding: 0.5rem 1rem; /* Smaller buttons for smaller screens */
+    font-size: 0.875rem; /* Slightly smaller text to fit smaller screens */
 }
 
-/* Additional custom styles can be added below */
+.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar-brand {
+    margin-bottom: 1rem; /* Space between logo and navigation links */
+}
+
+.jumbotron {
+    padding: 2rem 1rem; /* Less padding on smaller screens */
+}
+
+.container {
+    padding: 1rem; /* Less padding on smaller screens */
+}
