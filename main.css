@@ -1,8 +1,9 @@
-/* main.css - Your Custom Stylesheet */
+/* main.css - Revised Custom Stylesheet for a different layout */
 
 :root {
   --primary-color: #0056b3;
   --secondary-color: #e9ecef;
+  --accent-color: #ffca28; /* Adding an accent color for highlights */
 }
 
 body {
@@ -13,12 +14,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--secondary-color);
+  overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 .navbar {
   background-color: var(--primary-color);
-  /* Replace the darken() function with an actual color value */
   border-bottom: 3px solid #004a9f; /* Darker shade of primary color */
+  padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
@@ -29,31 +31,35 @@ body {
 .navbar-light .navbar-nav .nav-link {
   color: white;
   margin-right: 15px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  /* Replace the lighten() function with an actual color value */
-  color: #66afff; /* Lighter shade of white */
+  color: var(--accent-color);
 }
 
 .jumbotron {
   background-color: var(--primary-color);
   color: white;
   padding: 2rem 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem; /* Rounded corners for jumbotron */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow for depth */
 }
 
 .jumbotron h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .jumbotron p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .container {
   background-color: white;
   padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistent shadow for depth */
+  border-radius: 0.5rem; /* Rounded corners for container */
 }
 
 footer {
@@ -70,18 +76,53 @@ footer p {
 .btn-primary {
   background-color: var(--primary-color);
   border: none;
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
 }
 
 .btn-primary:hover {
-  /* Replace the lighten() function with an actual color value */
-  background-color: #66afff; /* Lighter shade of primary color */
+  background-color: var(--accent-color); /* Using accent color for hover state */
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners for card */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for cards */
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Deeper shadow on hover */
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar-brand,
   .navbar-nav .nav-link {
     color: white;
+  }
+
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron p,
+  .container,
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 0.5rem;
   }
 }
 
