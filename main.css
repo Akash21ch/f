@@ -177,3 +177,15 @@ footer p {
     width: 100%;
     margin-bottom: 1rem; /* Adds space between cards */
   }
+  .faq-question {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.faq-answer {
+  display: none; /* Hidden by default */
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
