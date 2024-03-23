@@ -23,16 +23,21 @@ body {
   padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
+  /* Ensures there is no unwanted space that may cause white rectangle */
+  position: relative; 
+  overflow: hidden; 
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   color: #ffffff;
-  /* Center brand horizontally with respect to navbar */
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) scale(2.0); /* Scale up the logo and center it */
+  transform: translateX(-50%) scale(2.0);
+  /* Ensures the logo does not become too large on smaller screens */
+  max-width: 100%;
+  overflow: hidden; 
 }
 
 .navbar-brand img {
@@ -40,10 +45,22 @@ body {
   max-height: 80px; /* Initial height before scaling */
   display: block;
 }
+.navbar::before, 
+.navbar::after,
+.navbar-light::before, 
+.navbar-light::after,
+.navbar-toggler::before, 
+.navbar-toggler::after,
+.navbar-toggler-icon::before, 
+.navbar-toggler-icon::after {
+  content: none !important;
+}
 
 .navbar-toggler {
   border-color: var(--secondary-color);
+  /* If the navbar-toggler is causing the white rectangles, adjust as needed */
 }
+
 
 .navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.7);
