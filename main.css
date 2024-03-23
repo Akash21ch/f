@@ -21,18 +21,18 @@ body {
 .navbar {
   background-color: var(--primary-color);
   padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between; /* Ensures the brand and toggler/collapse are on opposite ends */
 }
 
 .navbar-brand {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1; /* Allows brand to take necessary space */
+  color: #ffffff; /* Sets the color of text in the navbar brand to white */
 }
 
 .navbar-brand img {
-  max-height: 80px; /* Logo size */
-  width: auto; /* Maintain aspect ratio */
+  max-height: 80px; /* Adjusts logo size */
 }
 
 .navbar-toggler {
@@ -65,8 +65,8 @@ body {
 
 .jumbotron p {
   font-size: 1.25rem;
-  max-width: 600px;
   margin: auto;
+  max-width: 600px;
 }
 
 .container {
@@ -126,26 +126,16 @@ footer p {
     font-size: 1rem;
   }
 
-  .navbar {
-    flex-wrap: wrap;
-  }
-
   .navbar-brand {
-    justify-content: flex-start; /* Aligns brand to the start */
-    flex-grow: 0; /* Prevents the brand from growing */
-    margin-right: auto; /* Pushes the toggler and collapse to the end */
+    justify-content: flex-start;
   }
 
-  .navbar-collapse {
-    width: 100%;
-  }
-
-  .navbar-nav {
-    justify-content: flex-end; /* Aligns nav items to the end */
+  .navbar-toggler {
+    margin-left: auto;
   }
 
   .navbar-nav .nav-link {
-    margin-right: 0.5rem; /* Adjusts margin for nav items */
+    margin-right: 0.5rem;
   }
 
   .btn-primary {
@@ -158,23 +148,11 @@ footer p {
 
   .container, .jumbotron {
     padding: 1rem;
- /* Existing CSS */
+  }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Adds space between the logo image and the text */
+  .card {
+    width: 100%;
+    margin-bottom: 1rem; /* Adds space between cards */
+  }
 }
-
-#logo {
-  max-height: 50px; /* Example size - adjust as needed */
-}
-
-.navbar-brand span {
-  color: #ffffff; /* White text color */
-  font-size: 1.5rem; /* Adjust font size as necessary */
-  font-weight: bold; /* Optional: if you want the company name to be bold */
-}
-
-/* ... rest of your existing CSS ... */
 
