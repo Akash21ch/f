@@ -1,159 +1,129 @@
-/* main.css - Enhanced Custom Stylesheet for a modern, minimalist layout */
+/* Improved Professional Stylesheet */
 
 :root {
-  --primary-color: #2c3e50; /* A dark, desaturated blue */
-  --secondary-color: #ecf0f1; /* A very light gray-blue */
-  --accent-color: #3498db; /* A bright blue */
-  --text-color: #2c3e50; /* Matching text color to primary for consistency */
-  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary-color: #2a2f45; /* A deep blue, exuding professionalism */
+    --secondary-color: #f4f4f7; /* A light grey for background */
+    --accent-color: #4caf50; /* A confident green for CTAs and accents */
+    --text-color: #333333; /* A dark grey that's softer than black */
+    --font-stack: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-  font-family: var(--font-stack);
-  font-size: 1rem; /* 16px */
-  color: var(--text-color);
-  background-color: var(--secondary-color);
-  margin: 0;
-  padding: 0;
-  line-height: 1.8;
+    font-family: var(--font-stack);
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
 }
 
-.navbar {
-  background-color: var(--primary-color);
-  padding: 1rem 5%; /* Increased padding for a more airy feel */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
 }
 
 .navbar-brand {
-  font-size: 1.5rem; /* Larger size for brand/logo */
-  color: #ffffff;
-  font-weight: 700;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.7);
-  margin-right: 2rem;
-  transition: color 0.3s ease;
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link:focus {
-  color: var(--accent-color);
-  outline: none; /* Removes the outline to maintain a clean look */
+.navbar li {
+    padding: 0 20px;
 }
 
-.jumbotron {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  padding: 4rem 0; /* Increased top and bottom padding */
-  margin-bottom: 2rem;
-  text-align: center;
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
 }
 
-.jumbotron h1 {
-  font-size: 4rem; /* Larger size for main heading */
-  margin-bottom: 0.5rem;
+.navbar a:hover {
+    color: var(--accent-color);
 }
 
-.jumbotron p {
-  font-size: 1.25rem; /* Larger paragraph for emphasis */
-  max-width: 600px; /* Constraining width for readability */
-  margin-left: auto;
-  margin-right: auto;
+/* Main content and headings */
+main {
+    padding: 2rem 10%;
 }
 
-.container {
-  max-width: 1200px; /* Max-width for control over container width */
-  margin: 0 auto; /* Centering container */
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px; /* Subtle rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-top: 0;
 }
 
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Professional Investor Insights & Investment Categories */
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.section-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* CTAs */
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: darken(var(--accent-color), 10%);
+}
+
+/* Footer */
 footer {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  padding: 1rem 0;
-  text-align: center;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
 
 footer p {
-  margin: 0;
-}
-
-.btn-primary {
-  background-color: var(--accent-color);
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem 1.5rem; /* Larger padding for buttons */
-  border-radius: 5px; /* Matching border-radius with container */
-  transition: background-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: darken(var(--accent-color), 10%);
-}
-
-.card {
-  margin-bottom: 1rem; /* Spacing between cards */
-  background: #ffffff;
-  padding: 1.5rem; /* More padding for a better card content space */
-  border-radius: 10px; /* Rounded corners for cards */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Smooth shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .jumbotron h1 {
-    font-size: 3rem;
-  }
+    .navbar {
+        flex-direction: column;
+    }
 
-  .jumbotron p {
-    font-size: 1rem;
-  }
+    .navbar ul {
+        padding-top: 1rem;
+    }
 
-  .navbar-brand,
-  .navbar-nav .nav-link {
-    margin-right: 0.5rem; /* Reduced margin for smaller screens */
-  }
-
-  .card {
-    padding: 1rem;
-  }
-
-  .container, .jumbotron {
-    padding: 1rem;
-  }
-
-  .btn-primary {
-    padding: 0.5rem 1rem; /* Smaller buttons
-.btn-primary {
-    padding: 0.5rem 1rem; /* Smaller buttons for smaller screens */
-    font-size: 0.875rem; /* Slightly smaller text to fit smaller screens */
-}
-
-.navbar {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.navbar-brand {
-    margin-bottom: 1rem; /* Space between logo and navigation links */
-}
-
-.jumbotron {
-    padding: 2rem 1rem; /* Less padding on smaller screens */
-}
-
-.container {
-    padding: 1rem; /* Less padding on smaller screens */
+    .navbar li {
+        padding: 10px 0;
+    }
 }
