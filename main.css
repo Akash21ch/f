@@ -20,21 +20,22 @@ body {
 
 .navbar {
   background-color: var(--primary-color);
-  padding: 1rem 5%; /* Increased padding for a more airy feel */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1rem 0; /* Top and bottom padding for navbar */
 }
 
 .navbar-brand {
-  font-size: 2rem; /* Larger size for brand/logo */
-  color: #ffffff;
-  font-weight: 700;
+  display: flex; /* Enables flexbox for centering logo */
+  justify-content: center; /* Centers logo horizontally */
+  width: 100%; /* Full width */
+}
+
+.navbar-brand img {
+  max-height: 80px; /* Adjusts the size of the logo */
+  width: auto; /* Maintains the aspect ratio */
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.7);
-  margin-right: 2rem;
   transition: color 0.3s ease;
 }
 
@@ -44,138 +45,13 @@ body {
   outline: none; /* Removes the outline to maintain a clean look */
 }
 
-.jumbotron {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  padding: 4rem 0; /* Increased top and bottom padding */
-  margin-bottom: 2rem;
-  text-align: center;
-}
+/* ... Rest of the CSS ... */
 
-.jumbotron h1 {
-  font-size: 4rem; /* Larger size for main heading */
-  margin-bottom: 0.5rem;
-}
-
-.jumbotron p {
-  font-size: 1.25rem; /* Larger paragraph for emphasis */
-  max-width: 600px; /* Constraining width for readability */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container {
-  max-width: 1200px; /* Max-width for control over container width */
-  margin: 0 auto; /* Centering container */
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px; /* Subtle rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
-}
-
-footer {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-}
-
-.btn-primary {
-  background-color: var(--accent-color);
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem 1.5rem; /* Larger padding for buttons */
-  border-radius: 5px; /* Matching border-radius with container */
-  transition: background-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: darken(var(--accent-color), 10%);
-}
-
-.card {
-  margin-bottom: 1rem; /* Spacing between cards */
-  background: #ffffff;
-  padding: 1.5rem; /* More padding for a better card content space */
-  border-radius: 10px; /* Rounded corners for cards */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Smooth shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .jumbotron h1 {
-    font-size: 3rem;
+  /* ... Media query styles ... */
+
+  .navbar-brand img {
+    max-height: 50px; /* Smaller logo size for mobile */
   }
-
-  .jumbotron p {
-    font-size: 1rem;
-  }
-
-  .navbar-brand,
-  .navbar-nav .nav-link {
-    margin-right: 0.5rem; /* Reduced margin for smaller screens */
-  }
-
-  .card {
-    padding: 1rem;
-  }
-
-  .container, .jumbotron {
-    padding: 1rem;
-  }
-
-  .btn-primary {
-    padding: 0.5rem 1rem; /* Smaller buttons
-font-size: 0.875rem; /* Slightly smaller text to fit smaller screens */
 }
 
-.navbar {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.navbar-brand {
-    margin-bottom: 1rem; /* Space between logo and navigation links */
-}
-
-.jumbotron {
-    padding: 2rem 1rem; /* Less padding on smaller screens */
-}
-
-.container {
-    padding: 1rem; /* Less padding on smaller screens */
-}
-/* Main CSS File */
-
-/* Rest of your CSS */
-
-/* Logo Styles */
-.logo {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font */
-    font-size: 3rem; /* Size of the logo */
-    font-weight: 700; /* Boldness of the logo */
-    color: #e63946; /* The color you've shown for 'NEXT' */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 0.1em; /* Spacing between letters */
-    display: flex; /* Flexbox for centering */
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    height: 100vh; /* Full viewport height */
-}
-
-/* Additional styles for the container of the logo if needed */
-.logo-container {
-    text-align: center; /* Center the logo container */
-    margin: auto; /* Margin auto for horizontal centering */
-    width: 100%; /* Full width */
-}
