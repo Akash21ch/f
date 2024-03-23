@@ -1,4 +1,0 @@
-document.getElementById('exploreButton').addEventListener('click', function() {
-    window.location.href = '#investment-options';
-});
-
