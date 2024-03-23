@@ -80,18 +80,29 @@
 
 
  <!-- Investment Categories Section -->
-<section id="investment-categories" class="investment-options">
-    <div class="card">
-        <h2>Equities</h2>
-        <p>Buying shares for the long term.</p>
-        <button onclick="learnMore('equities')">Learn more about equities</button>
+<section id="investment-categories">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading">Investment Categories</h2>
+      </div>
     </div>
-    <div class="card">
-        <h2>Fixed income</h2>
-        <p>Seeking stable, lower risk returns.</p>
-        <button onclick="learnMore('fixedIncome')">See all fixed income funds</button>
+    <!-- Cards -->
+    <div class="row">
+      <div class="card col-lg-4">
+          <h3>Equities</h3>
+          <p>Buying shares for the long term.</p>
+          <button onclick="learnMore('equities')">Learn more about equities</button>
+      </div>
+      <div class="card col-lg-4">
+          <h3>Fixed income</h3>
+          <p>Seeking stable, lower risk returns.</p>
+          <button onclick="learnMore('fixedIncome')">See all fixed income funds</button>
+      </div>
+      <!-- Repeat for other categories -->
     </div>
-    <!-- Add more cards for each category -->
+  </div>
 </section>
 
 
