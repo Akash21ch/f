@@ -22,17 +22,22 @@ body {
   background-color: var(--primary-color);
   padding: 1rem 5%;
   display: flex;
-  justify-content: space-between; /* Ensures the brand and toggler/collapse are on opposite ends */
+  justify-content: center; /* Center the navbar contents */
+  position: relative; /* Position set for absolute positioning of the brand */
 }
 
 .navbar-brand {
+  position: absolute; /* Absolute position the brand to center it */
+  left: 50%;
+  transform: translateX(-50%) scale(2); /* Center brand and scale it up */
   display: flex;
   align-items: center;
-  color: #ffffff; /* Sets the color of text in the navbar brand to white */
 }
 
 .navbar-brand img {
-  max-height: 80px; /* Adjusts logo size */
+  max-height: 80px; /* Adjust logo size */
+  display: block;
+  transition: transform 0.3s ease; /* Smooth transformation for scaling */
 }
 
 .navbar-toggler {
@@ -128,6 +133,7 @@ footer p {
 
   .navbar-brand {
     justify-content: flex-start;
+    transform: translateX(-50%) scale(1); /* Scale down the logo for smaller devices */
   }
 
   .navbar-toggler {
@@ -146,13 +152,6 @@ footer p {
     padding: 1rem;
   }
 
-  .container, .jumbotron {
-    padding: 1rem;
-  }
+  .container, .jumbotron
 
-  .card {
-    width: 100%;
-    margin-bottom: 1rem; /* Adds space between cards */
-  }
-}
 
