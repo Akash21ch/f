@@ -1,13 +1,13 @@
 // Ensure that the DOM is fully loaded before attaching event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if the element with 'exploreButton' ID exists
-    var exploreBtn = document.getElementById('exploreButton');
-    if (exploreBtn) {
-        exploreBtn.addEventListener('click', function() {
-            // Scroll to the 'investment-options' section smoothly
-            document.getElementById('investment-categories').scrollIntoView({ behavior: 'smooth' });
-        });
+  document.querySelector('.faq-container').addEventListener('click', function(event) {
+    if (event.target.classList.contains('faq-question')) {
+      const answer = event.target.nextElementSibling;
+      answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
     }
+  });
+});
+
     document.addEventListener('DOMContentLoaded', function() {
   // Event delegation for FAQ toggling
   document.querySelector('.faq-container').addEventListener('click', function(event) {
